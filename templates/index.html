@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test page</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    </head>
+    <body>
+        {% include '_menu.html' %}
+
+        <p>Hello, Flask! {{ name }}!</p>
+        <p> This is project number {{ project_number }}</p>
+        <p> my name is {{ project_name }}</p>
+        <img src="{{ url_for('static', filename='images/boop.jpg') }}"
+        alt="boooop" width="240" height="240">
+
+    </body>
+
+    <script>
+        alert('WOW!')
+    </script>

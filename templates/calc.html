@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+    </head>
+    <body>
+        <p>{% if operation == ":" and n2 == 0%}
+                Ошибка
+            {% else %}
+                {% if operation =="+" %}
+                    {{n1+n2}}
+                {% elif operation =="-" %}
+                    {{n1-n2}}
+                {% elif operation =="*" %}
+                    {{n1*n2}}
+                {% elif operation =="**" %}
+                    {{n1**n2}}
+                {% elif operation ==":" %}
+                    {{n1/n2}}
+                {% endif %}
+            {% endif %}
+        </p>
+
+    </body>
+
+    <!-- '''<script>
+        alert('WOW!')
+    </script>
+    ''' -->

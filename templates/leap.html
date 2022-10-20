@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    {% if 'am' in 'lambda' %}
+        <p>True</p>
+    {% endif %}
+
+    {% if age > 5 %}
+        <p>False</p>
+    {% endif %}
+
+    {% if age % 10 == 0 %}
+        <p>10</p>
+    {% elif age % 5 == 0 %}
+        <p>5</p>
+        {% if age % 3 == 0 %}
+            <p>3</p>
+        {% endif %}
+    {% elif age % 2 == 0 %}
+        <p>2</p>
+    {% else %}
+        <p>Other</p>
+    {% endif %}
+
+    {{ "age > 10" if age > 10 else "age <= 10" }}
+
+    {% if year % 400 == 0 or (year % 100 != 0 and year % 4 == 0) %}
+        <p>Leap</p>
+    {% else %}
+        <p>Not leap</p>
+    {% endif %}
+</body>
+</html>
